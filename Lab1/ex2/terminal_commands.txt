@@ -1,0 +1,1 @@
+cat shake.txt | python mapper.py | sort -k1,1 -s | python reducer.py

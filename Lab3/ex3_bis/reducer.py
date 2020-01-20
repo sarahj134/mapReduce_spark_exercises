@@ -9,3 +9,4 @@ for reducer_trigger in sys.stdin:
 	for point_index in np.arange(n_points):
 		point = points[point_index,:]
 		print("{point_index}\t{point}".format(point_index=point_index, point=point))
+# to prevent similar point generation from one reducer to another, use the reducer key in the range argument of np.random.rand() instead of 5

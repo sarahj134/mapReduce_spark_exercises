@@ -1,0 +1,11 @@
+### Exercise 2 ###
+pets = sc.parallelize([("cat",1), ("dog", 1), ("cat", 2), ("dog", 3)])
+pets.collect()
+pets.take(2)
+
+pet_sum = pets.reduceByKey(lambda x, y : x +y)
+pet_count = pets.map(lambda x : (x[0], 1))
+pet_count = pet_count.reduceByKey(lambda x, y : x +y)
+
+#pet_sum_count = pet_sum.cogroup(pet_count).map(lambda x :(x[0], (list(x[1][0]), list(x[1][1])))).collect()
+pet_average = pet_sum.join(pet_count).map(lambda x :(x[0], x[1][0]/x[1][1])).collect()

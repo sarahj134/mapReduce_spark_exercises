@@ -14,7 +14,6 @@ def n_way_ms(L):
 print(n_way_ms(L))
 
 #### Exercise 1 v2  ####
-L = [ [1,2,3,4,5,6,7], [2,3,6,9], [3,7,10] ]
 
 def sorted_list(L):
 	mydict = {}

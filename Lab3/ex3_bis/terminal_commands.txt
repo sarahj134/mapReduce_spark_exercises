@@ -1,0 +1,5 @@
+cat reducer_trigger.txt | python mapper.py | sort -k1,1 -s | python reducer.py > F1.txt 
+# the last argument stores the output as a text file
+
+cat reducer_trigger.txt | python mapper.py | sort -k1,1 -s | python reducer.py > F2.txt
+# same, but change the arguments in the reducer to get the right dimensions
