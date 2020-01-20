@@ -1,0 +1,1 @@
+cat InputForCrossProduct/* | python mapper.py | sort -k1,1 -s | python reducer.py > F1_F2_concat.txt
