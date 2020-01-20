@@ -1,0 +1,9 @@
+# How to call script on multiple files
+cat multisets/* | python mapper.py | sort -k1,1 -s | python reducer.py
+
+# How to call script on multiple files, but also retrieve the filename to differentiate
+grep -r '' multisets | python mapper.py | sort -k1,1 -s | python reducer.py
+## mapper
+for element in sys.stdin:
+	element = element.strip()
+	filename, element = element.split(':', 1)

@@ -1,0 +1,4 @@
+
+# Running several mappers and reducers in a row
+# The output is the number of distinct totals
+cat Order.txt | python mapper1.py | sort -k1,1 -s | python reducer1.py | python mapper2.py | sort -k1,1 -s | python reducer2.py
