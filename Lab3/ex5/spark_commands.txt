@@ -1,3 +1,9 @@
-rdd1 = sc.parallelize(F1.txt)
-rdd2 = sc.parallelize(F2.txt)
+spark-2.4.4-bin-hadoop2.7/bin/pyspark
+## Ex4 in Spark
+rdd1 = sc.textFile("Users/sarah/Database_management/Lab3/ex5/F1.txt")
+rdd2 = sc.textFile("Users/sarah/Database_management/Lab3/ex5/F2.txt")
 
+rrd1zipped = rdd1.zipWithIndex().reduceByKey(lambda x :(x[1]))
+rrd2zipped = rdd2.zipWithIndex().reduceByKey(lambda x :(x[1]))
+
+rdd1 = sc.textFile("F1.txt")

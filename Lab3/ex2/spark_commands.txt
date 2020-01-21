@@ -1,4 +1,7 @@
 ### Exercise 2 ###
+
+Call spark-2.4.4-bin-hadoop2.7
+
 pets = sc.parallelize([("cat",1), ("dog", 1), ("cat", 2), ("dog", 3)])
 pets.collect()
 pets.take(2)

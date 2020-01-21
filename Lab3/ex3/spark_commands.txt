@@ -1,3 +1,6 @@
+spark-2.4.4-bin-hadoop2.7/bin/pyspark
+
+
 ### Exercise 2 ###
 pets = sc.parallelize([("cat",1), ("dog", 1), ("cat", 2), ("dog", 3)])
 pets.collect()

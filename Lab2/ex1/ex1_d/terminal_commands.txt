@@ -1,1 +1,1 @@
-cat input_files/* | python mapper.py
+cat input_files/* | python mapper.py | sort -k1,1 -s | python reducer.py
